@@ -1,0 +1,167 @@
+
+@font-face {
+	font-family: kenyan;
+	src: url(assets/fonts/kenyan\ coffee\ bd.otf);
+}
+body,html
+{
+	margin:0;
+	padding:0;
+}
+#navbar
+{
+	margin:0;
+	background-color: gray;
+	height:7%;
+	width:100%;
+	display:flex;
+	
+}
+
+
+#primaryNav
+{
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	width:100%;
+	padding:5px;
+}
+#leftNav
+{
+	display:grid;
+	grid-template-columns: repeat(4,1fr);
+
+}
+#rightNav
+{
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+}
+#displayHeader
+{
+	background-color: pink;
+	height:93%;
+	display:grid;
+	grid-template-rows: repeat(3,1fr);
+	place-items: center;
+}
+#displayHeader img {
+	width:250px;
+	height:250px;
+	padding-top:1vh;
+}
+#name
+{
+	font-family: kenyan;
+	font-size: 5vw;
+}
+#desc
+{
+	font-family: kenyan;
+	font-size: 2vw;
+	text-align: center;
+}
+#education
+{
+	background-color: whitesmoke;
+	height:40%;
+	padding-bottom: 50px;
+}
+.h1Desc
+{
+	margin: 0;
+	padding: 10px;
+	background-color: rgb(161, 8, 8);
+}
+.h2Desc
+{
+	margin: 0;
+	padding: 10 10 0 10px;
+}
+.h3Desc
+{
+	margin: 0;
+	padding: 0 0 10 10;
+}
+
+.school
+{
+	padding: 25px 0 0 10px;
+	display:grid;
+	grid-template-columns: .5fr 2fr;
+}
+.school img
+{
+	width: 100px;
+	height: 100px;
+	margin:auto;
+}
+
+#schoolStats {
+	border-collapse: collapse;
+	width: 75%;
+	font-family: Arial, sans-serif;
+}
+
+#schoolStats th, #schoolStats td {
+	border: 1px solid black;
+	padding: 8px;
+	text-align: left;
+}
+
+#schoolStats th {
+	background-color: #333;
+	color: white;
+}
+
+#schoolStats tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+#work h1
+{
+	background-color: rgb(27, 27, 232);
+}
+.job
+{
+	padding-bottom: 40px;
+}
+
+#projectHolder
+{
+	display:grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	padding: 10px;
+	grid-gap: 10px;
+}
+
+#projsHead
+{
+	background-color: coral;
+}
+.project
+{
+	background-color: pink;
+	height:400px;
+	border-radius: 10px;
+}
+.projHead
+{
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	background-color: rgb(192, 192, 192);
+	margin:0;
+}
+.projVideo
+{
+	display: block;
+	margin: 0 auto;
+}
+.videoBackground
+{
+	background-color: maroon;
+	margin: auto;
+	width:370px;
+	border-radius: 20px;
+}

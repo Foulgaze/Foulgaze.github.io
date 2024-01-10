@@ -1,0 +1,141 @@
+<html>
+	<link rel="stylesheet" href="index.css">
+	<body>
+		<header id = "navbar">
+			<nav id = "primaryNav">
+				<nav id = "leftNav">
+					<button class = "button" onclick="scrollToDiv('displayHeader')">Gabriel Righi</button>
+					<button class = "button" onclick="scrollToDiv('education')">Education</button>
+					<button class = "button" onclick="scrollToDiv('work')">Work Experience</button>
+					<button class = "button" onclick="scrollToDiv('projects')">Projects</button>
+
+				</nav>
+				<div></div>
+				<nav id = "rightNav">
+					<button>
+						LinkedIn
+					</button>
+					<button>
+						Github
+					</button>
+					<button>
+						Contact Me
+					</button>
+				</nav>
+			</nav>
+		</header>
+		<script>
+			function scrollToDiv(targetDiv) {
+				var targetDiv = document.getElementById(targetDiv);
+				targetDiv.scrollIntoView({ behavior: 'smooth' });
+			}
+		</script>
+		<div id = "displayHeader">
+			<img src ="assets/circular_gabe.png">
+			<div>
+				<h1 id = "name">Gabriel Righi</h1>
+			</div>
+			<div>
+				<h2 id = "desc">
+				Hi. I'm a Computer Science major completing my final semester at Washington State University.<br> 
+				I'm excited to work on interesting problems and expand my horizons as a developer.
+				</h2>
+			</div>
+		</div>
+		<div id = "education">
+			<h1 class = "h1Desc">Education</h1>
+			<div>
+				<h2 class = "h2Desc">Washington State University</h2>
+				<h3 class = "h3Desc">2021-2024</h3>
+				<div class = "school">
+					<img src="assets/wsu_logo.png">
+					<table id="schoolStats">
+						<tr>
+							<td>Current Education Level</td>
+							<td>Senior</td>
+						</tr>
+						<tr>
+							<td>Major</td>
+							<td>Computer Science (BS)</td>
+						</tr>
+						<tr>
+							<td>GPA</td>
+							<td>4.0</td>
+						</tr>
+						<tr>
+							<td>Relevant Courses</td>
+							<td>Operating Systems, Networking, Data Structures & Advanced Algorithms, etc...</td>
+						</tr>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+		<div id = "work">
+			<h1 class = "h1Desc">Work Experience</h1>
+			<div class = "job">
+				<h2 class = "h2Desc">Keysight Techonologies: Software Engineering Intern</h2>
+				<h3 class = "h3Desc">May 2023 - Aug 2023</h3>
+				<div class = "school">
+					<img src="assets/keysight_logo.png">
+					<div>
+						<p>
+
+							Spearheaded the development of a sophisticated fan control mechanism in Golang, optimizing hardware temperature management through real-time Kubernetes-monitored metrics. Additionally, I streamlined deployment processes by designing a robust GitLab Pipeline system and enhanced testing frameworks by integrating Allure reporting with Pytest, expanding support to Golang test outcomes.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class = "job">
+				<h2 class = "h2Desc">Washington State University: System's Programming Teacher's Assistant</h2>
+				<h3 class = "h3Desc">May 2023 - Aug 2023</h3>
+				<div class = "school">
+					<img src="assets/wsu_logo.png">
+					<div>
+						<p>
+							
+							I facilitated immersive learning experiences for students by guiding them through complex low-level programming concepts during interactive lab sessions.
+							 Providing constructive feedback, I fostered a deep understanding of systems programming. 
+							 Collaborating with the professor, I played a key role in enhancing the course materials by creating supplementary resources and assignments, contributing to a more comprehensive and enriching learning environment.
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div id = "projects">
+			<h1 class = "h1Desc" id = "projsHead">Projects</h1>
+
+			<div id = "projectHolder">
+				<div class = "project">
+					<h1 class = "projHead">Bracket GG</h1>
+					<p>Bracket GG is a NodeJS</p>
+					<div class = "videoBackground">
+						<video width="320" height = "220" autoplay muted loop class = "projVideo">
+							<source src="assets/videos/bracketgg.mp4" type="video/mp4">
+						</video>
+					</div>
+					
+				</div>
+				<div class = "project">
+					<h1 class = "projHead">Magic: The Gathering Playtable</h1>
+				</div>
+				<div class = "project">
+					<h1 class = "projHead">Virtual Rubik's Cube</h1>
+				</div>
+				<div class = "project">
+					<h1 class = "projHead">Wanix Operating System</h1>
+					<p>Bracket GG is a NodeJS</p>
+					<div class = "videoBackground">
+						<video width="320" height = "220" autoplay muted loop class = "projVideo">
+							<source src="assets/videos/os.mp4" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>
