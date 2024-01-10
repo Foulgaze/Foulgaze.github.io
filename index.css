@@ -3,6 +3,14 @@
 	font-family: kenyan;
 	src: url(assets/fonts/kenyan\ coffee\ bd.otf);
 }
+@font-face {
+	font-family: oswaldBold;
+	src: url(assets/fonts/Oswald-Bold.ttf);
+}
+@font-face{
+	font-family: oswaldReg;
+	src: url(assets/fonts/Oswald-Regular.ttf);
+}
 body,html
 {
 	margin:0;
@@ -61,12 +69,7 @@ body,html
 	font-size: 2vw;
 	text-align: center;
 }
-#education
-{
-	background-color: whitesmoke;
-	height:40%;
-	padding-bottom: 50px;
-}
+
 .h1Desc
 {
 	margin: 0;
@@ -88,12 +91,13 @@ body,html
 {
 	padding: 25px 0 0 10px;
 	display:grid;
-	grid-template-columns: .5fr 2fr;
+	grid-template-columns: .5fr 1fr;
+	padding-right: 10vw;
 }
 .school img
 {
-	width: 100px;
-	height: 100px;
+	width: 250px;
+	height: 250px;
 	margin:auto;
 }
 
@@ -164,4 +168,75 @@ body,html
 	margin: auto;
 	width:370px;
 	border-radius: 20px;
+}
+
+/* SCHOOL */
+#education
+{
+	background-color: rgb(207, 204, 204);
+	border-radius: 25px;
+	margin: 10vh 3vw 10vh 3vw;
+}
+
+.schoolHolder
+{
+	padding-right: 10%;
+}
+
+.schoolHeaderInfo
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+.schoolHeader
+{
+	text-align: center;
+	font-family: oswaldBold;
+}
+.schoolSubHeader
+{
+	background-color: #F7F7FF;
+	border-radius: 5px;
+	padding:5px;
+	text-align: center;
+}
+
+#educationDescription
+{
+	/* height:250px; */
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+  }
+
+th, td {
+text-align: left;
+padding: 8px;
+width:50%;
+}
+
+#relevantCourses
+{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 10px;
+place-self: center;
+}
+td span
+{
+padding: 5px;
+border-radius: 4px;
+background-color: #F7F7FF;
+display: inline-flex;
+align-items: center;
+text-align: center;
+}
+.tableDesc
+{
+	text-align: right;
+	font-size: 1.5vw;
+	font-family: oswaldReg;
 }
