@@ -5,152 +5,214 @@
 			<nav id = "primaryNav">
 				<nav id = "leftNav">
 					<button class = "button" onclick="scrollToDiv('displayHeader')">Gabriel Righi</button>
-					<button class = "button" onclick="scrollToDiv('education')">Education</button>
-					<button class = "button" onclick="scrollToDiv('work')">Work Experience</button>
-					<button class = "button" onclick="scrollToDiv('projects')">Projects</button>
+					<button class = "button" onclick="scrollToDiv('sectionHeader')">Education</button>
+					<button class = "button" onclick="scrollToDiv('jobDiv')">Work Experience</button>
+					<button class = "button" onclick="scrollToDiv('projectHeader')">Projects</button>
 
 				</nav>
 				<div></div>
 				<nav id = "rightNav">
-					<button>
+					<button onclick = "downloadLocalFile()">
+						Resume
+					</button>
+					<button onclick=" window.open('https://www.linkedin.com/in/gabriel-righi-9348811b2/', '_blank'); return false;">
 						LinkedIn
 					</button>
-					<button>
+					<button onclick=" window.open('https://github.com/Foulgaze', '_blank'); return false;">
 						Github
 					</button>
-					<button>
-						Contact Me
-					</button>
+					
 				</nav>
 			</nav>
 		</header>
 		<script>
+			function downloadLocalFile() {
+				var link = document.createElement("a");
+
+				link.href = "assets/resume.pdf";
+				link.setAttribute('target', '_blank');
+
+				document.body.appendChild(link);
+				link.click();
+
+				document.body.removeChild(link);
+        	}
+		</script>
+		<script>
 			function scrollToDiv(targetDiv) {
-				var targetDiv = document.getElementById(targetDiv);
-				targetDiv.scrollIntoView({ behavior: 'smooth' });
+				var targetElement = document.getElementById(targetDiv);
+				
+				if (targetElement) {
+					var navbarHeight = document.getElementById('navbar').offsetHeight; // Get the height of the navbar
+					var targetPosition = targetElement.offsetTop - navbarHeight; // Subtract the navbar height from the target position
+
+					window.scrollTo({
+						top: targetPosition,
+						behavior: 'smooth'
+					});
+				}
 			}
 		</script>
 		<div id = "displayHeader">
 			<img src ="assets/circular_gabe.png">
 			<div>
 				<h1 id = "name">Gabriel Righi</h1>
-			</div>
-			<div>
 				<h2 id = "desc">
-				Hi. I'm a Computer Science major completing my final semester at Washington State University.<br> 
-				I'm excited to work on interesting problems and expand my horizons as a developer.
+					Hi. I'm a Computer Science major completing my final semester at Washington State University.<br> 
+					I'm excited to work on interesting problems and expand my horizons as a developer.
 				</h2>
 			</div>
-		</div>
-		<div id = "education">
 			<div>
-				<div class = "school">
-					<img src="assets/wsu_logo.png">
-					<div class = "schoolHolder">
-						<h1 class ="schoolHeader">Washington State University</h1>
-						<div class = "schoolHeaderInfo">
-							<div class = "schoolSubHeader">
-								Computer Science Senior
-							</div>
-							<div class = "schoolSubHeader">
-								2021 - 2024
-							</div>
-						</div>
-						<div id = "educationDescription">
-							<table>
-								<tr>
-									<td class = "tableDesc">GPA</td>
-									<td><span>4.0</span></td>
-								</tr>
-								<tr>
-									<td class = "tableDesc">Relevant Courses</td>
-									<td>
-									<div id = "relevantCourses">
-										<span>Operating Systems</span>
-										<span>Networking and Security</span>
-										<span>Object Oriented Programming</span>
-										<span>Data Structures & Algorithms</span>
-										<span>Functional Programming </span>
-										<span>Intro To Cybersecurity</span>
-									</div>
-									</td>
-								</tr>
-								<tr>
-									<td class = "tableDesc">Certifications</td>
-									<td><div id = "relevantCourses">
-										<span>CompTIA Security+</span>
-										<span>Junos, Associate (JNCIA-Junos)</span>
-									</div></td>
-								</tr>
-							</table>
-						</div>
+				
+			</div>
+		</div>
+		<h1 id = "sectionHeader">Education</h1>
 
+		<div id = "education" class = "school">
+			<img src="assets/wsu_logo.png">
+			<div class = "schoolHolder">
+				<h1 class ="schoolHeader">Washington State University</h1>
+				<div class = "schoolHeaderInfo">
+					<div class = "schoolSubHeader">
+						Computer Science Senior
+					</div>
+					<div class = "schoolSubHeader">
+						2021 - 2024
 					</div>
 				</div>
+				<div id = "educationDescription">
+					<table>
+						<tr>
+							<td class = "tableDesc">GPA</td>
+							<td><span>4.0</span></td>
+						</tr>
+						<tr>
+							<td class = "tableDesc">Relevant Courses</td>
+							<td>
+							<div id = "relevantCourses">
+								<span>Operating Systems</span>
+								<span>Networking and Security</span>
+								<span>Object Oriented Programming</span>
+								<span>Data Structures & Algorithms</span>
+								<span>Functional Programming </span>
+								<span>Intro To Cybersecurity</span>
+							</div>
+							</td>
+						</tr>
+						<tr>
+							<td class = "tableDesc">Certifications</td>
+							<td><div id = "relevantCourses">
+								<span>CompTIA Security+</span>
+								<span>Junos, Associate (JNCIA-Junos)</span>
+							</div></td>
+						</tr>
+					</table>
+				</div>
 			</div>
+		</div>
+		<div id = "jobDiv">
+			<h1 id = "jobHeader">Work Experience</h1>
 		</div>
 		<div id = "work">
-			<h1 class = "h1Desc">Work Experience</h1>
 			<div class = "job">
-				<h2 class = "h2Desc">Keysight Techonologies: Software Engineering Intern</h2>
-				<h3 class = "h3Desc">May 2023 - Aug 2023</h3>
-				<div class = "school">
-					<img src="assets/keysight_logo.png">
-					<div>
-						<p>
-
-							Spearheaded the development of a sophisticated fan control mechanism in Golang, optimizing hardware temperature management through real-time Kubernetes-monitored metrics. Additionally, I streamlined deployment processes by designing a robust GitLab Pipeline system and enhanced testing frameworks by integrating Allure reporting with Pytest, expanding support to Golang test outcomes.
-						</p>
+				<img src="assets/keysight_logo.png">
+				<div>
+					<div class = "schoolHolder">
+						<h1 id ="keySightHeader">Keysight Technologies</h1>
+						<div class = "schoolHeaderInfo">
+							<div class = "schoolSubHeader">
+								Software Engineer
+							</div>
+							<div class = "schoolSubHeader">
+								May '23 - Aug '23
+							</div>
+						</div>
 					</div>
-					
+					<div>
+						<ul>
+							<li class = "keysightBullet">Orchestrated fan control mechanism using Golang, optimizing hardware temperature management based on real-time Kubernetes-monitored metrics; containerized the solution with Docker</li>
+							<li class = "keysightBullet">Designed and implemented a robust GitLab Pipeline system, enabling seamless and efficient deployment and testing of newly tagged operating system builds.</li>
+							<li class = "keysightBullet">Enhanced testing framework capabilities by integrating Allure reporting with Pytest for comprehensive test result visualization, and extended support to Golang test outcomes on a server platform.</li>
+							<li class = "keysightBullet">Leveraged ChatGPT to develop automated network tests, ensuring robust network performance assessment.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 			<div class = "job">
-				<h2 class = "h2Desc">Washington State University: System's Programming Teacher's Assistant</h2>
-				<h3 class = "h3Desc">May 2023 - Aug 2023</h3>
-				<div class = "school">
-					<img src="assets/wsu_logo.png">
-					<div>
-						<p>
-							
-							I facilitated immersive learning experiences for students by guiding them through complex low-level programming concepts during interactive lab sessions.
-							 Providing constructive feedback, I fostered a deep understanding of systems programming. 
-							 Collaborating with the professor, I played a key role in enhancing the course materials by creating supplementary resources and assignments, contributing to a more comprehensive and enriching learning environment.
-						</p>
+				<img src="assets/wsu_logo.png">
+				<div>
+					<div class = "schoolHolder">
+						<h1 id ="taHeader">Washington State University</h1>
+						<div class = "schoolHeaderInfo">
+							<div class = "schoolSubHeader">
+								Teacher's Assistant
+							</div>
+							<div class = "schoolSubHeader">
+								Jun '23 - May '23
+							</div>
+						</div>
 					</div>
-					
+					<div>
+						<ul>
+							<li class = "keysightBullet">Guided students through intricate low-level programming concepts by conducting interactive lab sessions and delivering constructive feedback, cultivating a profound comprehension of systems programming.</li>
+        					<li class = "keysightBullet">Coordinated with the professor to improve course materials, crafting additional resources and assignments for a more comprehensive learning environment.</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id = "projects">
-			<h1 class = "h1Desc" id = "projsHead">Projects</h1>
+		<h1 id = "projectHeader">Projects</h1>
 
+		<div id = "projects">
 			<div id = "projectHolder">
 				<div class = "project">
 					<h1 class = "projHead">Bracket GG</h1>
-					<p>Bracket GG is a NodeJS</p>
-					<div class = "videoBackground">
-						<video width="320" height = "220" autoplay muted loop class = "projVideo">
-							<source src="assets/videos/bracketgg.mp4" type="video/mp4">
-						</video>
+					<div class = "projContents">
+						<img src ="assets/icons/bracket_gg.png">
+						<button>Project Page</button>
+
+						<div class = "projDesc">
+							Using Node JS and GraphQL, BracketGG collates, formats, and presents queried data sourced from the popular start.gg website.
+							The Node JS server, deployed on the Vercel, ensures expedited access to real-time information.
+						</div>
 					</div>
-					
 				</div>
 				<div class = "project">
 					<h1 class = "projHead">Magic: The Gathering Playtable</h1>
+					<div class = "projContents">
+						<img src ="assets/icons/mtg_playtable.png">
+						<button>Project Page</button>
+						<div class = "projDesc">
+							Designed a virtual play-table for Magic: The Gathering, leveraging Unity Engine, C#, and RestAPI for dynamic texture acquisition and online gameplay. 
+							Implemented a customized Linux-based TCP server in C++ and C# to facilitate multiplayer networking for the interactive play-table experience.
+						</div>
+					</div>
 				</div>
 				<div class = "project">
 					<h1 class = "projHead">Virtual Rubik's Cube</h1>
+					
+					<div class = "projContents">
+						<img src ="assets/icons/rubiks_cube.png">
+						<button>Project Page</button>
+						<div class = "projDesc">
+							Developed a Unity Engine program using C# that enables users to generate and solve Rubik’s Cubes of varying sizes, offering a versatile and interactive experience for cube enthusiasts.
+						</div>
+					</div>
 				</div>
 				<div class = "project">
 					<h1 class = "projHead">Wanix Operating System</h1>
-					<p>Bracket GG is a NodeJS</p>
-					<div class = "videoBackground">
-						<video width="320" height = "220" autoplay muted loop class = "projVideo">
-							<source src="assets/videos/os.mp4" type="video/mp4">
-						</video>
+					<div class = "projContents">
+						<img src ="assets/icons/wanix.png">
+						<button>Project Page</button>
+						<div class = "projDesc">
+							Designed and implemented Wanix OS following the specifications outlined in 'Embedded and Real-Time Operating Systems.' Utilized C programming language for the development, and employed QEMU for emulation purposes. 
+							The operating system featured a terminal interface, memory mapping functionality, and the capability to execute user programs, showcasing a comprehensive set of functionalities.
+						</div>
 					</div>
+					
 				</div>
+
+				
 			</div>
 		</div>
 		

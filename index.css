@@ -19,11 +19,23 @@ body,html
 #navbar
 {
 	margin:0;
-	background-color: gray;
+	padding:0;
+	background-color: #D44D5C;
 	height:7%;
 	width:100%;
 	display:flex;
+	position: sticky;
+  top: 0;
 	
+}
+#navbar button
+{
+	background: none;
+	border:none;
+}
+#navbar button:hover
+{
+	background-color: #C14D5C;
 }
 
 
@@ -32,7 +44,6 @@ body,html
 	display:grid;
 	grid-template-columns: repeat(3,1fr);
 	width:100%;
-	padding:5px;
 }
 #leftNav
 {
@@ -47,10 +58,10 @@ body,html
 }
 #displayHeader
 {
-	background-color: pink;
+	background-color: #D44D5C;
 	height:93%;
 	display:grid;
-	grid-template-rows: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr);
 	place-items: center;
 }
 #displayHeader img {
@@ -58,110 +69,64 @@ body,html
 	height:250px;
 	padding-top:1vh;
 }
+
+
+
 #name
 {
 	font-family: kenyan;
-	font-size: 5vw;
+	font-size: max(5vw,5vh);
+	text-align: center;
 }
 #desc
 {
 	font-family: kenyan;
-	font-size: 2vw;
+	font-size: max(2vw,2vh);
 	text-align: center;
 }
-
-.h1Desc
+#sectionHeader
 {
-	margin: 0;
-	padding: 10px;
-	background-color: rgb(161, 8, 8);
+	font-family: oswaldBold;
+	text-align: center;
+	font-size: 4vw;
 }
-.h2Desc
+#jobDiv
 {
-	margin: 0;
-	padding: 10 10 0 10px;
+	background-color: #222629;
+	margin:0;
+	padding:0;
 }
-.h3Desc
+#jobHeader
 {
-	margin: 0;
-	padding: 0 0 10 10;
-}
-
-.school
-{
-	padding: 25px 0 0 10px;
-	display:grid;
-	grid-template-columns: .5fr 1fr;
-	padding-right: 10vw;
-}
-.school img
-{
-	width: 250px;
-	height: 250px;
-	margin:auto;
-}
-
-#schoolStats {
-	border-collapse: collapse;
-	width: 75%;
-	font-family: Arial, sans-serif;
-}
-
-#schoolStats th, #schoolStats td {
-	border: 1px solid black;
-	padding: 8px;
-	text-align: left;
-}
-
-#schoolStats th {
-	background-color: #333;
+	padding:0;
+	margin:0;
+	font-family: oswaldBold;
+	text-align: center;
+	font-size: 4vw;
 	color: white;
 }
-
-#schoolStats tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-#work h1
+#projectHeader
 {
-	background-color: rgb(27, 27, 232);
+	padding:0;
+	margin:0;
+	font-family: oswaldBold;
+	text-align: center;
+	font-size: 4vw;
+	background-color: #222629;
+	color:white;
 }
-.job
-{
-	padding-bottom: 40px;
-}
-
 #projectHolder
 {
 	display:grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	padding: 10px;
-	grid-gap: 10px;
+	padding: 2.5vh 2.5vw 2.5vh 2.5vw;
+	grid-row-gap: 4vh;
+	grid-column-gap: 2vw;
+	
 }
 
-#projsHead
-{
-	background-color: coral;
-}
-.project
-{
-	background-color: pink;
-	height:400px;
-	border-radius: 10px;
-}
-.projHead
-{
-	text-align: center;
-	border-radius: 10px 10px 0 0;
-	background-color: rgb(192, 192, 192);
-	margin:0;
-}
-.projVideo
-{
-	display: block;
-	margin: 0 auto;
-}
+
 .videoBackground
 {
 	background-color: maroon;
@@ -173,14 +138,38 @@ body,html
 /* SCHOOL */
 #education
 {
-	background-color: rgb(207, 204, 204);
+	background-color: rgb(227, 226, 226);
 	border-radius: 25px;
 	margin: 10vh 3vw 10vh 3vw;
 }
 
-.schoolHolder
+.school
 {
-	padding-right: 10%;
+	padding: 2vh 10vw 2vh 10px;
+	display:grid;
+	grid-template-columns: .5fr 1fr;
+}
+.school img
+{
+	width: 250px;
+	height: 250px;
+	margin:auto;
+}
+@media (max-width: 1000px) {
+	.school img
+	{
+		width: 150px;
+		height: 150px;
+		margin:auto;
+	}
+}
+@media (max-width: 600px) {
+	.school img
+	{
+		width: 75px;
+		height: 75px;
+		margin:auto;
+	}
 }
 
 .schoolHeaderInfo
@@ -193,6 +182,8 @@ body,html
 {
 	text-align: center;
 	font-family: oswaldBold;
+	color:#9C2135;
+	font-size:2.5vw;
 }
 .schoolSubHeader
 {
@@ -200,12 +191,9 @@ body,html
 	border-radius: 5px;
 	padding:5px;
 	text-align: center;
+	font-size:1.5vw;
 }
 
-#educationDescription
-{
-	/* height:250px; */
-}
 table {
 	border-collapse: collapse;
 	width: 100%;
@@ -224,6 +212,8 @@ display:grid;
 grid-template-columns: 1fr 1fr 1fr;
 grid-gap: 10px;
 place-self: center;
+font-size: 1.2vw;
+
 }
 td span
 {
@@ -239,4 +229,179 @@ text-align: center;
 	text-align: right;
 	font-size: 1.5vw;
 	font-family: oswaldReg;
+}
+
+/* WORK */
+#work
+{
+	background-color: #222629;
+	padding:50px;
+	display:grid;
+	grid-template-rows: 1fr 1fr;
+	grid-row-gap: 6vh;
+	
+}
+
+.job
+{
+	padding: 2vh 10vw 2vh 10px;
+	display:grid;
+	grid-template-columns: .5fr 1fr;
+	background-color: rgb(235, 231, 235);
+	border-radius: 15px;
+}
+
+.job img
+{
+	width:250px;
+	height:250px;
+	margin:auto;
+}
+
+@media (max-width: 1000px) {
+	.job img
+	{
+		width: 150px;
+		height: 150px;
+		margin:auto;
+	}
+}
+@media (max-width: 600px) {
+	.job img
+	{
+		width: 75px;
+		height: 75px;
+		margin:auto;
+	}
+}
+
+#keysightHeader
+{
+	text-align: center;
+	font-family: oswaldBold;
+	color:#E90029;
+}
+#taHeader
+{
+	text-align: center;
+	font-family: oswaldBold;
+	color: #9C2135;
+}
+.keysightBullet
+{
+	font-family: oswaldReg;
+}
+#projects
+{
+	background-color: #222629;
+}
+
+/* Projects */
+#projsHead
+{
+	background-color: coral;
+}
+.project
+{
+	background-color: #1C5D99;
+	border-radius: 10px 10px 0 0;
+
+}
+.projContents > img
+{
+	width: 150px;
+	height: auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.projContents > button
+{
+	width: 150px;
+	height: auto;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	border-radius: 5px;
+}
+.projHead
+{
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	background-color: #F7F7FF;
+	margin:0 0 2.5vh 0;
+	font-family: oswaldBold;
+}
+.projContents
+{
+	display:grid;
+	grid-template-rows: .5fr .1fr 1fr;
+
+}
+.projDesc
+{
+	background-color:  #F7F7FF;
+	/* padding: 20px; */
+	text-align: center;
+	display:flex;
+	align-items: center;
+	font-size:max(1vw,1vh);
+	border-radius: 0 0 10px 10px;
+	background-clip: content-box;
+	font-family: oswaldReg;
+	padding:10px;
+}
+
+
+/* CONTACT ME */
+.contact-section {
+    background-color: #1C5D99; /* Updated to match your theme */
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #F7F7FF; /* Updated text color */
+    font-family: oswaldBold; /* Updated font */
+}
+
+.contact-section p {
+    color: #C14D5C; /* Updated text color */
+    font-family: oswaldReg; /* Updated font */
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #F7F7FF; /* Updated text color */
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #F7F7FF; /* Updated input background color */
+    border: 1px solid #C14D5C; /* Updated input border color */
+    color: #1C5D99; /* Updated input text color */
+}
+
+contact-section button {
+    background-color: #C14D5C; /* Updated button background color */
+    color: #F7F7FF; /* Updated button text color */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+contact-section button:hover {
+    background-color: #9C2135; /* Updated button hover color */
 }
