@@ -32,6 +32,7 @@ body,html
 {
 	background: none;
 	border:none;
+	font-size: max(.9vw,.9vh);
 }
 #navbar button:hover
 {
@@ -123,7 +124,14 @@ body,html
 	padding: 2.5vh 2.5vw 2.5vh 2.5vw;
 	grid-row-gap: 4vh;
 	grid-column-gap: 2vw;
-	
+}
+
+@media (max-width: 1000px) {
+	#projectHolder
+	{
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: none;
+	}
 }
 
 
@@ -223,11 +231,12 @@ background-color: #F7F7FF;
 display: inline-flex;
 align-items: center;
 text-align: center;
+justify-content: center;
 }
 .tableDesc
 {
 	text-align: right;
-	font-size: 1.5vw;
+	font-size: max(1.5vw,1.5vh);
 	font-family: oswaldReg;
 }
 
@@ -314,6 +323,7 @@ text-align: center;
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
+	margin-bottom: 2vh;
 }
 .projContents > button
 {
@@ -342,6 +352,7 @@ text-align: center;
 {
 	background-color:  #F7F7FF;
 	/* padding: 20px; */
+	justify-content: center;
 	text-align: center;
 	display:flex;
 	align-items: center;
@@ -352,56 +363,16 @@ text-align: center;
 	padding:10px;
 }
 
-
-/* CONTACT ME */
-.contact-section {
-    background-color: #1C5D99; /* Updated to match your theme */
-    padding: 40px;
-    text-align: center;
+@media (max-width: 1000px) {
+	.projDesc
+	{
+		font-size:max(2vh,2vw)
+	}
 }
 
-.contact-section h2 {
-    color: #F7F7FF; /* Updated text color */
-    font-family: oswaldBold; /* Updated font */
-}
-
-.contact-section p {
-    color: #C14D5C; /* Updated text color */
-    font-family: oswaldReg; /* Updated font */
-}
-
-form {
-    max-width: 600px;
-    margin: 20px auto;
-    display: grid;
-    grid-gap: 15px;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #F7F7FF; /* Updated text color */
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #F7F7FF; /* Updated input background color */
-    border: 1px solid #C14D5C; /* Updated input border color */
-    color: #1C5D99; /* Updated input text color */
-}
-
-contact-section button {
-    background-color: #C14D5C; /* Updated button background color */
-    color: #F7F7FF; /* Updated button text color */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-contact-section button:hover {
-    background-color: #9C2135; /* Updated button hover color */
+.projContents > button
+{
+	height:40px;
+	background-color: F1F8FE;
+	border: none;
 }
