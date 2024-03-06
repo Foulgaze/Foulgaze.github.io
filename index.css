@@ -66,8 +66,8 @@ body,html
 	place-items: center;
 }
 #displayHeader img {
-	width:250px;
-	height:250px;
+	width:350px;
+	height:350px;
 	padding-top:1vh;
 }
 
@@ -169,6 +169,12 @@ body,html
 		width: 150px;
 		height: 150px;
 		margin:auto;
+	}
+	#displayHeader img {
+		padding-top: 0;
+		width:40vw;
+		height:auto;
+		padding-top:1vh;
 	}
 }
 @media (max-width: 600px) {
